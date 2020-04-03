@@ -1,0 +1,27 @@
+header, main, footer {
+    padding-left: 300px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+
+.nav-news{
+    background-color: #212121;
+    height: 122px;
+    display: flex;
+    align-items: center;
+
+    >.container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .title{
+        color: white;
+        padding: 0;
+        margin: 0;
+    }
+}
