@@ -1,0 +1,15 @@
+<ul id="slide-out" class="sidenav sidenav-fixed">
+  <li>
+    <div class="user-view">
+      <img class="background-img" src="assets/images/holding.jpg">
+    </div>
+  </li>
+  <li><a href="#!"><i class="material-icons">menu_book</i>Dash News</a></li>
+  <li>
+    <div class="divider"></div>
+  </li>
+  <li><a class="subheader">Subheader</a></li>
+  <li *ngFor="let item of items"><a routerLinkActive="active" [routerLink]="[item.url]" class="waves-effect"
+      href="#!">{{item.title}}</a></li>
+</ul>
+<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
