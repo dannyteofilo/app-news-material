@@ -13,8 +13,8 @@ export class DateComponent implements OnInit {
     const today = new Date();
 
 
-    let aux = today.toString()
-    const arrDate = aux.split(' ')
+    const aux = today.toString();
+    const arrDate = aux.split(' ');
     this.date = `${arrDate[0]}, ${arrDate[1]} ${arrDate[2]}`;
   }
 

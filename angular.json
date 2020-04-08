@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "app-news-v2": {
+    "app-news-material": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/app-news-v2",
+            "outputPath": "dist/app-news-material",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "app-news-v2:build"
+            "browserTarget": "app-news-material:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "app-news-v2:build:production"
+              "browserTarget": "app-news-material:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app-news-v2:build"
+            "browserTarget": "app-news-material:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "app-news-v2:serve"
+            "devServerTarget": "app-news-material:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "app-news-v2:serve:production"
+              "devServerTarget": "app-news-material:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "app-news-v2"
+  "defaultProject": "app-news-material"
 }
