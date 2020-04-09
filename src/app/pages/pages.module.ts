@@ -6,11 +6,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComponentsModule } from '../components/components.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PAGES_ROUTES } from './pages.routes';
+import { NewsApiComponent } from './news-api/news-api.component';
 
 
 
 @NgModule({
-  declarations: [PagesComponent, DashboardComponent],
+  declarations: [PagesComponent, DashboardComponent, NewsApiComponent],
   imports: [
     CommonModule,
     SharedModule,
