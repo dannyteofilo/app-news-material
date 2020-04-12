@@ -14,11 +14,18 @@ header, main, footer {
     display: flex;
     align-items: center;
 
-    >.container{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+    >.content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+
+        @media only screen and (min-width: 992px) {
+          width: 90%;
+        }
     }
+
     .title{
         color: white;
         padding: 0;
@@ -28,4 +35,12 @@ header, main, footer {
 
 .news-main{
   margin-top: 50px;
+
+  >.content{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

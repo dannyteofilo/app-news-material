@@ -1,8 +1,11 @@
 <header>
     <nav class="nav-news top-nav">
         <app-sidebar></app-sidebar>
-        <div class="container">
-            <div>
+        <div class="content">
+            <div class="hide-on-small-only">
+                <h2 class="title">Dash News</h2>
+            </div>
+            <div class="hide-on-med-and-up">
                 <h2 class="title">News</h2>
             </div>
             <app-date class="date"></app-date>
@@ -10,7 +13,7 @@
     </nav>
 </header>
 <main class="news-main">
-    <div class="container">
+    <div class="content">
         <router-outlet></router-outlet>
     </div>
 </main>
