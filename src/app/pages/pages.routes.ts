@@ -7,8 +7,9 @@ const pagesRoutes: Routes = [
     {
         path: '', component: PagesComponent,
         children: [
-            { path: 'dashboard', component: DashboardComponent },
-            { path: 'newsapi', component: NewsApiComponent }
+            { path: 'headlines', component: DashboardComponent },
+            { path: 'everything', component: DashboardComponent },
+            { path: 'sources', component: NewsApiComponent }
         ]
 
     }

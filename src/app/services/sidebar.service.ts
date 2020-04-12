@@ -6,8 +6,13 @@ import { Injectable } from '@angular/core';
 export class SidebarService {
   private items: any = [
     {
-      title: 'News API',
-      url: '/newsapi',
+      title: 'Everything',
+      url: '/everything',
+      icon: 'https://newsapi.org/favicon-32x32.png'
+    },
+    {
+      title: 'Sources',
+      url: '/sources',
       icon: 'https://newsapi.org/favicon-32x32.png'
     }
 
