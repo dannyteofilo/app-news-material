@@ -12,8 +12,13 @@
         </div>
     </nav>
 </header>
-<main class="news-main">
+<div class="news-loading" *ngIf="preloader.loading">
+    <app-preloader></app-preloader>
+</div>
+<main class="news-main">    
     <div class="content">
-        <router-outlet></router-outlet>
+        <div  class="router">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </main>

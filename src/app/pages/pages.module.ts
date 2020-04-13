@@ -7,11 +7,12 @@ import { ComponentsModule } from '../components/components.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PAGES_ROUTES } from './pages.routes';
 import { NewsApiComponent } from './news-api/news-api.component';
+import { TopHeadlinesComponent } from './top-headlines/top-headlines.component';
 
 
 
 @NgModule({
-  declarations: [PagesComponent, DashboardComponent, NewsApiComponent],
+  declarations: [PagesComponent, DashboardComponent, NewsApiComponent, TopHeadlinesComponent],
   imports: [
     CommonModule,
     SharedModule,
