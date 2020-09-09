@@ -13,9 +13,9 @@ export class TopHeadlinesComponent implements OnInit {
 
   ngOnInit() {
     this.preloader.setStatus();
-    this.service.getTopHeadlines().subscribe(resp => {
-      if (resp.status) {
-        this.data = resp.articles;
+    this.service.getTopHeadlines().subscribe((resp: any) => {
+      if (resp) {
+        this.data = resp;
       } else {
         console.warn('Not data found');
       }
