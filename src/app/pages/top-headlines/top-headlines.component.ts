@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NewApiService, PreloaderService } from 'src/app/services/service.index';
+import { NewApiService } from 'src/app/services/service.index';
 
 @Component({
   selector: 'app-top-headlines',
@@ -9,18 +9,16 @@ import { NewApiService, PreloaderService } from 'src/app/services/service.index'
 export class TopHeadlinesComponent implements OnInit {
 
   public data: any;
-  constructor(public service: NewApiService, private preloader: PreloaderService) { }
+  constructor(public service: NewApiService) { }
 
   ngOnInit() {
-    this.preloader.setStatus();
     this.service.getTopHeadlines().subscribe((resp: any) => {
       if (resp) {
         this.data = resp;
       } else {
         console.warn('Not data found');
       }
-      this.preloader.setStatus();
-    })
+    });
   }
 
 }

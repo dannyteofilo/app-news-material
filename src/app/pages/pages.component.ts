@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PreloaderService } from '../services/service.index';
 
 @Component({
   selector: 'app-pages',
@@ -8,7 +7,7 @@ import { PreloaderService } from '../services/service.index';
 })
 export class PagesComponent implements OnInit {
 
-  constructor(public preloader: PreloaderService) { }
+  constructor() { }
 
   ngOnInit() {
   }
