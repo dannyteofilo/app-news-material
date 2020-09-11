@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { ajax, AjaxError } from 'rxjs/ajax';
 import { of } from 'rxjs';
 import { pluck, catchError } from 'rxjs/operators';
 import { GLOBAL } from './global.service';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -12,21 +12,22 @@ export class NewApiService {
   private url: string;
   private key: string;
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.url = GLOBAL.urlApi;
     this.key = GLOBAL.key;
   }
 
-  public error = (err: AjaxError) => {
-    console.warn('error: ', err.message)
+  public error = (err: HttpErrorResponse) => {
+    console.warn('error: ', err.message);
     return of([]);
   }
 
   private request(endPoint) {
-    return ajax(`${this.url}${endPoint}&apiKey=${this.key}`).pipe(
-      pluck('response'),
-      catchError(this.error)
-    )
+    return this.http.get(`${this.url}${endPoint}&apiKey=${this.key}`)
+      .pipe(
+        pluck('articles'),
+        catchError(this.error)
+      );
   }
 
   public getTopHeadlines() {
@@ -40,6 +41,5 @@ export class NewApiService {
   public getEverything() {
     return this.request(`everything?q=bitcoin`);
   }
-
 
 }
