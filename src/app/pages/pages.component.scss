@@ -41,6 +41,8 @@ footer,
 
 .news-main {
   margin-top: 50px;
+  margin-bottom: 50px;
+  flex: 1;
 
   > .content {
     width: 90%;
@@ -53,4 +55,10 @@ footer,
       width: 100%;
     }
   }
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
