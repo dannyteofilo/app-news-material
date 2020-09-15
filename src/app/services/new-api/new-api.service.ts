@@ -38,8 +38,8 @@ export class NewApiService {
     return this.request(`top-headlines?country=${id}`);
   }
 
-  public getEverything() {
-    return this.request(`everything?q=bitcoin`);
+  public getEverything(search: string) {
+    return this.request(`everything?q=${search}`);
   }
 
 }

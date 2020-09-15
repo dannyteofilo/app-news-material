@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewApiService } from 'src/app/services/service.index';
 
 @Component({
   selector: 'app-news-api',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsApiComponent implements OnInit {
 
-  constructor() { }
+  countryId: string;
+  public data: [];
+  constructor(public service: NewApiService) {
+    this.countryId = 'us';
+  }
 
   ngOnInit() {
+    this.service.getTopHeadlinesByCountry(this.countryId).subscribe((resp: any) => {
+      if (resp) {
+        this.data = resp;
+      } else {
+        console.warn('Not data found');
+      }
+    });
   }
 
 }
