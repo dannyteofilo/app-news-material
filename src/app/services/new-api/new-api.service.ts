@@ -39,6 +39,7 @@ export class NewApiService {
   }
 
   public getEverything(search: string) {
+    console.log('search: : : ',search)
     return this.request(`everything?q=${search}`);
   }
 

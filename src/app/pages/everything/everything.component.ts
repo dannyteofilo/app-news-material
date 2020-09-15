@@ -16,7 +16,13 @@ export class EverythingComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.getEverything(this.search).subscribe((resp: any) => {
+
+  }
+
+  onSearch(e: any) {
+    console.log('on search: ', e);
+
+    this.service.getEverything(e.search).subscribe((resp: any) => {
       if (resp) {
         this.data = resp;
       } else {

@@ -1,3 +1,4 @@
 <div class="top-headlines">
+    <app-search (response)="onSearch($event)"></app-search>
     <app-dashboard *ngIf="data" class="dashboard" [list]="data"></app-dashboard>
 </div>

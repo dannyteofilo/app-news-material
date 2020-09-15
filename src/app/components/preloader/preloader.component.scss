@@ -1,5 +1,6 @@
 .progress-loader{
  position: relative;
+ z-index: 1;
  
  .loading-spinner{    
         background-color: #0000001f;
