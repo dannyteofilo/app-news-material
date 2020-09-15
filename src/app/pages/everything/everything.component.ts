@@ -20,8 +20,6 @@ export class EverythingComponent implements OnInit {
   }
 
   onSearch(e: any) {
-    console.log('on search: ', e);
-
     this.service.getEverything(e.search).subscribe((resp: any) => {
       if (resp) {
         this.data = resp;

@@ -11,7 +11,7 @@ const pagesRoutes: Routes = [
         children: [
             { path: 'headlines', component: TopHeadlinesComponent },
             { path: 'everything', component: EverythingComponent },
-            { path: 'sources', component: NewsApiComponent }
+            { path: 'country', component: NewsApiComponent }
         ]
 
     }

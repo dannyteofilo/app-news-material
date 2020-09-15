@@ -11,8 +11,8 @@ export class SidebarService {
       icon: 'https://newsapi.org/favicon-32x32.png'
     },
     {
-      title: 'Sources',
-      url: '/sources',
+      title: 'By Country',
+      url: '/country',
       icon: 'https://newsapi.org/favicon-32x32.png'
     }
 
